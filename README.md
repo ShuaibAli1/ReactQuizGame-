@@ -10,3 +10,9 @@ Currently, two official plugins are available:
 - Run the following:
 - npm install
 - npm run dev  : to run  the applicaiton locally
+
+- Api URLs:
+- 1. `https://restcountries.com/v3.1/capital/${capital}`
+- 2.  `https://restcountries.com/v3.1/region/${region}`
+
+

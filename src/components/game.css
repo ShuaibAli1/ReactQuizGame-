@@ -1,72 +1,98 @@
-.Game {
-    text-align: center;
+/* General resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* A clean, readable font */
   }
   
+  body {
+    background-color: #f5f5f5; 
+    color: #333; 
+    font-size: 16px; /* Standard base font size */
+    line-height: 1.6; /* Improved line spacing for readability */
+    padding: 20px;
+  }
+  
+  .App {
+    max-width: 800px; /* Limiting the width for better reading experience */
+    margin: auto;
+    background: #fff; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  }
+  
+  h1, h2, h3 {
+    color: #673ab7; /* A thematic color for headings */
+  }
+  
+  /* Styling for question cards */
   .question-card {
-    /* Center the div  */
-    margin: 0 auto;
-  
-    /* Dimensions  */
-    width: 80%; /* Can be in percentage also. */
-    height: auto;
-  
-    /* Visual  */
-    background-color: gray;
-    padding: 16px;
-    border-radius: 16px;
-    color: white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #e3f2fd; /* A soft blue background for question cards */
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
   }
   
   ul {
-    list-style: none;
+    list-style-type: none; /* Remove default list styling */
   }
   
   li {
-    margin-top: 8px;
-    background-color: darkgray;
-    padding: 16px;
-    border: 3px solid white;
-    border-radius: 20px;
-    font-size: 20px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    cursor: pointer; /* Indicates that an item is clickable */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for feedback */
   }
   
-  .question-text {
-    color: darkblue;
-    font-size: 24px;
+  li:hover {
+    background-color: #f1f1f1; /* Light hover effect */
+    transform: translateY(-2px); /* Slight lift effect on hover */
   }
   
-  /* Final Results  */
+  /* Style for the correct answer - Add this class dynamically using JS on selection */
+  .correct-answer {
+    background-color: #c8e6c9; /* Green background for correct answers */
+  }
   
+  /* Style for the incorrect answer - Add this class dynamically */
+  .incorrect-answer {
+    background-color: #ffcdd2; /* Red background for incorrect answers */
+  }
+  
+  /* Final results styling */
   .final-results {
-    /* Center the div  */
-    margin: 0 auto;
-  
-    /* Dimensions  */
-    width: 50%; /* Can be in percentage also. */
-    height: auto;
-    margin-top: 64px;
-  
-    /* Visual  */
-    background-color: gray;
-    padding: 16px;
-    border-radius: 16px;
-    color: white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    text-align: center;
   }
   
   button {
-    background-color: red; /* Green */
+    background-color: #673ab7; /* Matching the heading color */
+    color: #ffffff;
+    padding: 10px 20px;
     border: none;
-    color: white;
-    padding: 16px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-  
-    border-radius: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
   }
+  
+  button:hover {
+    background-color: #5e35b1; /* A darker shade on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .App {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 24px; /* Slightly smaller heading for smaller screens */
+    }
+  }
+  
